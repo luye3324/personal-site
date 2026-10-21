@@ -1,0 +1,1305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>陆烨 LU YE // 04 — AI 应用开发工程师 | 个人技术档案</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="site-body">
+
+  <!-- =========================================================
+       1. 顶部技术遥测控制台 (SYSTEM HUD CONTROLLER)
+       ========================================================= -->
+  <header class="hud-header" id="hud-header">
+    <div class="hud-inner">
+      <div class="hud-identity">
+        <a href="#hero" class="brand-monogram">
+          <span class="brand-char">LY</span>
+          <span class="brand-index">04</span>
+        </a>
+        <div class="system-status-indicator">
+          <span class="status-pulse-dot"></span>
+          <span class="status-text mono">SYSTEM: DEPLOYED // STATUS: CANDIDATE_ACTIVE</span>
+        </div>
+      </div>
+
+      <div class="telemetry-readout mono hide-tablet">
+        <div class="readout-block">
+          <span class="label">NODE:</span>
+          <span class="val">NANJING_CN [32.06°N 118.79°E]</span>
+        </div>
+        <span class="readout-sep">|</span>
+        <div class="readout-block">
+          <span class="label">SPECIALIZATION:</span>
+          <span class="val">AI_APPS · RAG · FASTAPI</span>
+        </div>
+        <span class="readout-sep">|</span>
+        <div class="readout-block">
+          <span class="label">TIMESTAMP:</span>
+          <span class="val text-lime" id="telemetry-timestamp">00:00:00 CST</span>
+        </div>
+      </div>
+
+      <nav class="hud-navigation">
+        <ul class="nav-menu mono">
+          <li><a href="#systems" class="nav-link"><span class="nav-idx">01/</span>核心工程</a></li>
+          <li><a href="#architecture" class="nav-link"><span class="nav-idx">02/</span>系统拓扑</a></li>
+          <li><a href="#capabilities" class="nav-link"><span class="nav-idx">03/</span>技术规格</a></li>
+          <li><a href="#methodology" class="nav-link"><span class="nav-idx">04/</span>工程准则</a></li>
+          <li><a href="#dossier" class="nav-link"><span class="nav-idx">05/</span>技术档案</a></li>
+        </ul>
+        <a href="#contact" class="btn-hud-action mono">
+          <span class="btn-badge">ESTABLISH CONTACT</span>
+          <span class="btn-arrow">↗</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       2. 英雄区：高密度技术总览与工程规格 (HERO DOSSIER)
+       ========================================================= -->
+  <section id="hero" class="hero-section">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-laser-line"></div>
+    
+    <div class="container hero-container">
+      
+      <!-- 状态与元数据看板 -->
+      <div class="meta-status-strip mono">
+        <div class="status-chip primary-chip">
+          <span class="chip-dot"></span>
+          <span>INTENT // 2026 AI 应用开发实习生</span>
+        </div>
+        <div class="status-chip hide-mobile">
+          <span class="chip-dim">EDUCATION:</span>
+          <span>南京财经大学 · 计算机科学与技术 本科在读</span>
+        </div>
+        <div class="status-chip hide-tablet">
+          <span class="chip-dim">ENGINEERING CADENCE:</span>
+          <span class="text-lime">VERIFIED REPOSITORIES</span>
+        </div>
+      </div>
+
+      <!-- 核心大标题与专属标识 -->
+      <div class="hero-main-banner">
+        <div class="hero-editorial-grid">
+          <div class="hero-typography">
+            <div class="hero-pretitle mono">[ SYSTEM CANDIDATE DOSSIER // CODE: LY-04 ]</div>
+            <h1 class="hero-name">
+              <span class="name-zh">陆烨</span>
+              <span class="name-en">LU YE</span>
+              <span class="badge-numeral">04</span>
+            </h1>
+            <div class="hero-title-role mono">
+              <span>AI APPLICATION DEVELOPER</span>
+              <span class="slash-divider">///</span>
+              <span>BACKEND SYSTEMS ARCHITECT</span>
+            </div>
+          </div>
+          
+          <div class="hero-abstract-card mono">
+            <div class="abstract-header">
+              <span class="abstract-title">// ENGINEERING MANIFESTO</span>
+              <span class="abstract-status">RELIABILITY FIRST</span>
+            </div>
+            <p class="abstract-content">
+              专注于大语言模型落地应用、RAG（检索增强生成）系统与高性能后端服务架构。
+              拒绝盲目调用黑盒接口，坚持<strong>“深入原理、契约严谨、链路闭环”</strong>的工程实践，
+              具备从数据清洗、结构建模、向量检索到服务鉴权与异常容灾的完整交付能力。
+            </p>
+            <div class="abstract-metrics">
+              <div class="metric-item">
+                <span class="m-k">TARGET ROLE:</span>
+                <span class="m-v text-white">AI 应用开发实习生</span>
+              </div>
+              <div class="metric-item">
+                <span class="m-k">GRADUATION:</span>
+                <span class="m-v text-white">2028 年本科毕业</span>
+              </div>
+              <div class="metric-item">
+                <span class="m-k">PRIMARY STACK:</span>
+                <span class="m-v text-lime">Python · FastAPI · Qwen API · RAG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 四项核心工程规格面板 (Driver Specs -> Candidate Specifications) -->
+      <div class="hero-specs-row mono">
+        <div class="spec-cell">
+          <div class="spec-id">SPEC // 01</div>
+          <div class="spec-title">教育与理论根基</div>
+          <div class="spec-data">NUFE CS</div>
+          <div class="spec-desc">统招本科在读，系统修读数据结构、程序设计、数据库系统、软件工程等专业核心课程。</div>
+        </div>
+        
+        <div class="spec-cell highlight-cell">
+          <div class="spec-id">SPEC // 02</div>
+          <div class="spec-title">可交付实战项目</div>
+          <div class="spec-data text-lime">03 <span class="unit">SYSTEMS</span></div>
+          <div class="spec-desc">涵盖 RAG 问答 Agent、FastAPI 知识库中台服务、协同过滤推荐系统，均为端到端可验证闭环。</div>
+        </div>
+
+        <div class="spec-cell">
+          <div class="spec-id">SPEC // 03</div>
+          <div class="spec-title">双语技术文档应用</div>
+          <div class="spec-data">CET-6 <span class="unit">444</span> / CET-4 <span class="unit">498</span></div>
+          <div class="spec-desc">熟练阅读全英文开源框架源码、IEEE 技术文献、官方 RFC 规范及国际化 API 技术手册。</div>
+        </div>
+
+        <div class="spec-cell">
+          <div class="spec-id">SPEC // 04</div>
+          <div class="spec-title">工程范式与可观测性</div>
+          <div class="spec-data">100% <span class="unit">PRODUCTION-READY</span></div>
+          <div class="spec-desc">严格遵循 RESTful 规范、Pydantic 声明式校验、分层架构解耦，坚持基于日志与源码解决问题。</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       3. 核心实战工程系统 (ENGINEERING SYSTEMS ON-TRACK)
+       ========================================================= -->
+  <section id="systems" class="section systems-section">
+    <div class="container">
+      
+      <div class="section-heading-bar mono">
+        <div class="sh-left">
+          <span class="sh-index">[ 01 ]</span>
+          <span class="sh-label">PRODUCTION-GRADE REPOSITORIES</span>
+          <span class="sh-sub">// 核心工程实战</span>
+        </div>
+        <div class="sh-right hide-mobile">
+          <span>STANDARD: MODULAR · DECOUPLED · GROUNDED</span>
+        </div>
+      </div>
+
+      <div class="systems-deck">
+
+        <!-- ================= SYSTEM 01: RAG AGENT ================= -->
+        <article class="system-dossier-card" id="project-rag">
+          <div class="dossier-header mono">
+            <div class="dh-main">
+              <span class="dossier-code">[ REPO_01 // AI_AGENT ]</span>
+              <span class="dossier-tag">AI 应用开发 · 核心项目</span>
+            </div>
+            <div class="dh-meta">
+              <span class="dossier-status"><span class="pulse-indicator"></span>OPERATIONAL</span>
+            </div>
+          </div>
+
+          <div class="dossier-headline">
+            <h3 class="system-title">基于 RAG 架构的智能文档问答 Agent 系统</h3>
+            <div class="system-subtitle mono">Document-Level Retrieval-Augmented Generation & Grounded Reasoning Agent</div>
+          </div>
+
+          <div class="dossier-grid">
+            <!-- 左侧：系统背景与全链路技术实现 -->
+            <div class="dossier-content-column">
+              <div class="block-section">
+                <h4 class="block-label mono">// 01. 研发背景与业务痛点</h4>
+                <p class="body-text">
+                  针对传统知识库关键词检索在多义词、上下文语义理解上的明显缺陷，以及通用大模型在垂直专业领域问答时存在的<strong>事实幻觉（Hallucination）</strong>与<strong>知识时效性滞后</strong>问题，自主设计并实现了一套端到端的检索增强生成（RAG）智能问答 Agent。
+                  系统确保模型所有的推演回答均强制绑定用户上传的私有资料，实现“结论必有出处，逻辑皆可溯源”。
+                </p>
+              </div>
+
+              <div class="block-section">
+                <h4 class="block-label mono">// 02. 端到端数据流与架构链路 (Data Pipeline)</h4>
+                
+                <!-- 交互式数据流图谱 -->
+                <div class="pipeline-schematic mono">
+                  <div class="schematic-step">
+                    <div class="step-num">STAGE 01</div>
+                    <div class="step-box">
+                      <div class="sb-name">文档解析与清洗</div>
+                      <div class="sb-detail">PDF/TXT 接入 · 符号过滤</div>
+                    </div>
+                  </div>
+                  <div class="schematic-connector">→</div>
+
+                  <div class="schematic-step">
+                    <div class="step-num">STAGE 02</div>
+                    <div class="step-box">
+                      <div class="sb-name">语义感知分块</div>
+                      <div class="sb-detail">Sliding Window · 元数据绑定</div>
+                    </div>
+                  </div>
+                  <div class="schematic-connector">→</div>
+
+                  <div class="schematic-step">
+                    <div class="step-num">STAGE 03</div>
+                    <div class="step-box">
+                      <div class="sb-name">稠密向量嵌入</div>
+                      <div class="sb-detail">Text-Embedding · 空间投影</div>
+                    </div>
+                  </div>
+                  <div class="schematic-connector">→</div>
+
+                  <div class="schematic-step">
+                    <div class="step-num">STAGE 04</div>
+                    <div class="step-box highlight-step">
+                      <div class="sb-name">余弦相似度召回</div>
+                      <div class="sb-detail">Top-K Candidate · 阈值过滤</div>
+                    </div>
+                  </div>
+                  <div class="schematic-connector">→</div>
+
+                  <div class="schematic-step">
+                    <div class="step-num">STAGE 05</div>
+                    <div class="step-box highlight-step">
+                      <div class="sb-name">Qwen API 推理</div>
+                      <div class="sb-detail">Prompt 注入 · 上下文合成</div>
+                    </div>
+                  </div>
+                  <div class="schematic-connector">→</div>
+
+                  <div class="schematic-step">
+                    <div class="step-num">STAGE 06</div>
+                    <div class="step-box">
+                      <div class="sb-name">溯源与兜底</div>
+                      <div class="sb-detail">引用回传 · 确定性拒答</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="block-section">
+                <h4 class="block-label mono">// 03. 核心攻坚工作与实现细节 (Key Implementations)</h4>
+                <div class="detail-matrix">
+                  <div class="matrix-item">
+                    <div class="mi-index mono">01</div>
+                    <div class="mi-body">
+                      <h5>异构文档解析与清洗</h5>
+                      <p>构建结构化文本提取管道，支持 PDF 及 TXT 文档的自动化解析，消除非标准换行符、冗余制表符及特殊控制字符，统一字符集编码为 UTF-8。</p>
+                    </div>
+                  </div>
+
+                  <div class="matrix-item">
+                    <div class="mi-index mono">02</div>
+                    <div class="mi-body">
+                      <h5>基于滑动窗口的文档分块（Chunking）</h5>
+                      <p>针对长篇幅技术资料采用重叠滑动窗口机制，平衡上下文完整性与切片颗粒度，并在每个切片中结构化封装来源文档名、起始段落位置等溯源元数据（Metadata）。</p>
+                    </div>
+                  </div>
+
+                  <div class="matrix-item">
+                    <div class="mi-index mono">03</div>
+                    <div class="mi-body">
+                      <h5>文本向量化表征与相似度检索</h5>
+                      <p>构建向量化投影流程，建立高维稠密语义向量空间。根据用户提问实时计算向量余弦相似度（Cosine Similarity），毫秒级召回 Top-K 高相关性候选文本片段。</p>
+                    </div>
+                  </div>
+
+                  <div class="matrix-item">
+                    <div class="mi-index mono">04</div>
+                    <div class="mi-body">
+                      <h5>通义千问 (Qwen API) 上下文重组与提示词工程</h5>
+                      <p>制定系统级指令约束（System Prompt），结合召回片段与用户 Query 进行上下文注入；严格限制大模型依据召回上下文推理，从机制上杜绝跨域虚构。</p>
+                    </div>
+                  </div>
+
+                  <div class="matrix-item">
+                    <div class="mi-index mono">05</div>
+                    <div class="mi-body">
+                      <h5>证据追溯回传与无资料确定性兜底</h5>
+                      <p>将参考片段、匹配得分及文档出处随答案一并结构化回传；当相似度均未达到置信度阈值时，触发预置安全兜底提示，避免大模型胡乱作答。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 收获与演进 -->
+              <div class="dossier-analysis-grid mono">
+                <div class="analysis-card">
+                  <div class="ac-tag text-lime">// ENGINEERING GAINS (工程收获)</div>
+                  <p>深入理解了 RAG 全链路中各个超参数（分块大小 Chunk Size、重叠比率 Overlap、相似度阈值 Threshold、Top-K 数量）对最终问答召回率（Recall）与精准度（Precision）的制约关系。</p>
+                </div>
+                <div class="analysis-card">
+                  <div class="ac-tag text-cyan">// FUTURE ROADMAP (迭代方向)</div>
+                  <p>计划引入 Cross-Encoder 重新排序（Rerank）机制以进一步提升长尾问题检索质量，结合 BM25 算法构建“混合检索（Hybrid Search）”，并集成会话上下文意图重写。</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- 右侧：工程规格参数面板 -->
+            <div class="dossier-spec-column mono">
+              <div class="spec-panel-box">
+                <div class="spb-header">
+                  <span>// TECHNICAL SPECIFICATIONS</span>
+                </div>
+                
+                <div class="spb-rows">
+                  <div class="spb-row">
+                    <span class="label">ENGINE:</span>
+                    <span class="val text-white">Python 3.10+ / Asyncio</span>
+                  </div>
+                  <div class="spb-row">
+                    <span class="label">LLM BACKBONE:</span>
+                    <span class="val text-lime">Qwen API (通义千问)</span>
+                  </div>
+                  <div class="spb-row">
+                    <span class="label">PIPELINE:</span>
+                    <span class="val text-white">RAG (Retrieval-Augmented)</span>
+                  </div>
+                  <div class="spb-row">
+                    <span class="label">SIMILARITY:</span>
+                    <span class="val text-white">Cosine Similarity</span>
+                  </div>
+                  <div class="spb-row">
+                    <span class="label">INPUT PARSERS:</span>
+                    <span class="val text-white">PDF Engine / Plain Text</span>
+                  </div>
+                  <div class="spb-row">
+                    <span class="label">GROUNDING:</span>
+                    <span class="val text-lime">Source Chunk Traceback</span>
+                  </div>
+                </div>
+
+                <div class="spb-tags">
+                  <span class="tag-label">// STACK TAGS:</span>
+                  <div class="tags-container">
+                    <span class="stack-badge active">Python</span>
+                    <span class="stack-badge active">Qwen API</span>
+                    <span class="stack-badge active">RAG</span>
+                    <span class="stack-badge">Vector Retrieval</span>
+                    <span class="stack-badge">Text Processing</span>
+                    <span class="stack-badge">Prompt Engineering</span>
+                    <span class="stack-badge">Metadata Grounding</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================= SYSTEM 02: KNOWLEDGE BASE BACKEND ================= -->
+        <article class="system-dossier-card" id="project-backend">
+          <div class="dossier-header mono">
+            <div class="dh-main">
+              <span class="dossier-code">[ REPO_02 // BACKEND_SERVICE ]</span>
+              <span class="dossier-tag">后端服务工程 · 规范化架构</span>
+            </div>
+            <div class="dh-meta">
+              <span class="dossier-status"><span class="pulse-indicator"></span>API RESTFUL SPEC</span>
+            </div>
+          </div>
+
+          <div class="dossier-headline">
+            <h3 class="system-title">个人知识库管理系统后端服务</h3>
+            <div class="system-subtitle mono">Layered RESTful Backend Service with Declarative Validation & JWT Auth</div>
+          </div>
+
+          <div class="dossier-grid">
+            <div class="dossier-content-column">
+              <div class="block-section">
+                <h4 class="block-label mono">// 01. 研发背景与架构目标</h4>
+                <p class="body-text">
+                  针对个人碎片化技术资料存储分散、分类缺乏层级、检索效率低下等管理痛点，独立构建了一套轻量化、高可用性的知识库中台后端服务。
+                  系统遵循现代企业级后端分层架构规范，严格实现接口契约设计、声明式入参校验、ORM 持久层解耦与无状态安全鉴权。
+                </p>
+              </div>
+
+              <div class="block-section">
+                <h4 class="block-label mono">// 02. 分层架构模型 (Layered System Architecture)</h4>
+                
+                <div class="architecture-diagram mono">
+                  <div class="arch-layer">
+                    <div class="layer-tag">PRESENTATION LAYER</div>
+                    <div class="layer-box">
+                      <span class="layer-title">API Routing & Contract Layer</span>
+                      <span class="layer-desc">FastAPI APIRouter · 标准 HTTP 动词映射 · 统一状态码 (200, 201, 400, 401, 404, 422)</span>
+                    </div>
+                  </div>
+                  <div class="arch-flow-arrow">▼ 依赖注入 / 声明式入参拦截</div>
+
+                  <div class="arch-layer">
+                    <div class="layer-tag">VALIDATION & SECURITY LAYER</div>
+                    <div class="layer-box highlight-layer">
+                      <span class="layer-title">Pydantic Schemas & OAuth2 JWT Guard</span>
+                      <span class="layer-desc">强类型数据校验 · 字段类型自动转换 · JWT Token 签名解密 · 路由访问守卫</span>
+                    </div>
+                  </div>
+                  <div class="arch-flow-arrow">▼ 业务调用 / 领域上下文传递</div>
+
+                  <div class="arch-layer">
+                    <div class="layer-tag">DATA ACCESS & PERSISTENCE LAYER</div>
+                    <div class="layer-box">
+                      <span class="layer-title">SQLAlchemy ORM & Session Manager</span>
+                      <span class="layer-desc">CRUD 数据抽象封装 · 数据库连接池 · 事务上下文管理器 · MySQL 实体持久化</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="block-section">
+                <h4 class="block-label mono">// 03. 核心攻坚工作与实现细节 (Key Implementations)</h4>
+                <div class="detail-matrix">
+                  <div class="matrix-item">
+                    <div class="mi-index mono">01</div>
+                    <div class="mi-body">
+                      <h5>规范化实体关系建模 (ER Modeling)</h5>
+                      <p>设计用户实体（User）、分类实体（Category）、知识条目实体（KnowledgeItem）的数据库结构；采用第三范式规划表结构，配置外键级联与关键索引以保证关系型存储一致性。</p>
+                    </div>
+                  </div>
+
+                  <div class="matrix-item">
+                    <div class="mi-index mono">02</div>
+                    <div class="mi-body">
+                      <h5>基于 FastAPI 搭建 RESTful API 规范体系</h5>
+                      <p>根据 REST 规范设计无状态资源接口；利用 Pydantic 深度定制请求（Request）与响应（Response）DTO 规范，实现类型强制校验、默认值补齐及敏感字段在序列化时的过滤。</p>
+                    </div>
+                  </div>
+
+                  <div class="matrix-item">
+                    <div class="mi-index mono">03</div>
+                    <div class="mi-body">
+                      <h5>基于 SQLAlchemy 的数据持久层解耦</h5>
+                      <p>采用 Repository 模式抽象数据库操作层，利用 Session 机制保障数据写入的原子性，彻底消除业务接口路由对底层 SQL 执行细节的直接依赖。</p>
+                    </div>
+                  </div>
+
+                  <div class="matrix-item">
+                    <div class="mi-index mono">04</div>
+                    <div class="mi-body">
+                      <h5>无状态 JWT 会话与用户鉴权机制</h5>
+                      <p>采用行业标准算法对用户密码进行单向加盐哈希存储；基于 JSON Web Token (JWT) 实现用户登录态的无状态化流转，结合 FastAPI Depends 依赖注入实现路由级权限拦截。</p>
+                    </div>
+                  </div>
+
+                  <div class="matrix-item">
+                    <div class="mi-index mono">05</div>
+                    <div class="mi-body">
+                      <h5>全局异常拦截与 OpenAPI 文档标准化</h5>
+                      <p>定制全局统一异常捕获中间件，输出结构化标准错误报文；依托 OpenAPI 3.0 规范自动生成 Swagger UI 与 ReDoc 文档，支持低沟通成本的接口在线自测。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dossier-analysis-grid mono">
+                <div class="analysis-card">
+                  <div class="ac-tag text-lime">// ENGINEERING GAINS (工程收获)</div>
+                  <p>完整经历从数据建模、接口契约设计、ORM 抽象到安全鉴权的工业级后端全流程，形成了规范化的分层架构思维与扎实的 API 开发素养。</p>
+                </div>
+                <div class="analysis-card">
+                  <div class="ac-tag text-cyan">// FUTURE ROADMAP (迭代方向)</div>
+                  <p>持续补充分页查询（Pagination）、基于全文索引的高性能关键词检索，引入 Pytest 搭建单元测试流水线，并提供标准化 Dockerfile 部署支持。</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="dossier-spec-column mono">
+              <div class="spec-panel-box">
+                <div class="spb-header">
+                  <span>// TECHNICAL SPECIFICATIONS</span>
+                </div>
+                
+                <div class="spb-rows">
+                  <div class="spb-row">
+                    <span class="label">FRAMEWORK:</span>
+                    <span class="val text-lime">FastAPI (Python 3.10+)</span>
+                  </div>
+                  <div class="spb-row">
+                    <span class="label">RDBMS:</span>
+                    <span class="val text-white">MySQL 8.0</span>
+                  </div>
+                  <div class="spb-row">
+                    <span class="label">ORM LAYER:</span>
+                    <span class="val text-white">SQLAlchemy Core & ORM</span>
+                  </div>
+                  <div class="spb-row">
+                    <span class="label">VALIDATION:</span>
+                    <span class="val text-white">Pydantic v2</span>
+                  </div>
+                  <div class="spb-row">
+                    <span class="label">AUTH PROTOCOL:</span>
+                    <span class="val text-lime">OAuth2 Password Bearer / JWT</span>
+                  </div>
+                  <div class="spb-row">
+                    <span class="label">DOCUMENTATION:</span>
+                    <span class="val text-white">OpenAPI 3.0 / Swagger UI</span>
+                  </div>
+                </div>
+
+                <div class="spb-tags">
+                  <span class="tag-label">// STACK TAGS:</span>
+                  <div class="tags-container">
+                    <span class="stack-badge active">FastAPI</span>
+                    <span class="stack-badge active">MySQL</span>
+                    <span class="stack-badge active">SQLAlchemy</span>
+                    <span class="stack-badge active">Pydantic</span>
+                    <span class="stack-badge">JWT Auth</span>
+                    <span class="stack-badge">RESTful API</span>
+                    <span class="stack-badge">Swagger UI</span>
+                    <span class="stack-badge">ER Modeling</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ================= SYSTEM 03: RECOMMENDER ALGORITHM ================= -->
+        <article class="system-dossier-card" id="project-recommender">
+          <div class="dossier-header mono">
+            <div class="dh-main">
+              <span class="dossier-code">[ REPO_03 // ALGORITHM_LAB ]</span>
+              <span class="dossier-tag">算法工程实践 · 协同过滤体系</span>
+            </div>
+            <div class="dh-meta">
+              <span class="dossier-status"><span class="pulse-indicator"></span>EXPERIMENT COMPLETE</span>
+            </div>
+          </div>
+
+          <div class="dossier-headline">
+            <h3 class="system-title">协同过滤推荐算法工程实验与评估体系</h3>
+            <div class="system-subtitle mono">Collaborative Filtering Recommender Engine with User/Item Dual-Channel Evaluation</div>
+          </div>
+
+          <div class="dossier-grid">
+            <div class="dossier-content-column">
+              <div class="block-section">
+                <h4 class="block-label mono">// 01. 实验背景与核心目标</h4>
+                <p class="body-text">
+                  围绕经典推荐系统的核心数理逻辑与工程实现展开深度实验。针对大规模交互场景下数据极其稀疏的典型特征，
+                  自主走通从原始行为日志清洗、稀疏交互矩阵构建、高维相似度向量运算到最终 Top-N 推荐生成的完整算法闭环。
+                </p>
+              </div>
+
+              <div class="block-section">
+                <h4 class="block-label mono">// 02. 算法实现与量化实验链路 (Algorithm Pipeline)</h4>
+                
+                <div class="pipeline-schematic mono">
+                  <div class="schematic-step">
+                    <div class="step-num">STAGE 01</div>
+                    <div class="step-box">
+                      <div class="sb-name">行为日志清洗</div>
+                      <div class="sb-detail">异常数据剔除 · 格式归一化</div>
+                    </div>
+                  </div>
+                  <div class="schematic-connector">→</div>
+
+                  <div class="schematic-step">
+                    <div class="step-num">STAGE 02</div>
+                    <div class="step-box">
+                      <div class="sb-name">用户-物品矩阵</div>
+                      <div class="sb-detail">稀疏矩阵构建 · 向量表征</div>
+                    </div>
+                  </div>
+                  <div class="schematic-connector">→</div>
+
+                  <div class="schematic-step">
+                    <div class="step-num">STAGE 03</div>
+                    <div class="step-box highlight-step">
+                      <div class="sb-name">相似度矩阵运算</div>
+                      <div class="sb-detail">余弦 / 皮尔逊系数向量化</div>
+                    </div>
+                  </div>
+                  <div class="schematic-connector">→</div>
+
+                  <div class="schematic-step">
+                    <div class="step-num">STAGE 04</div>
+                    <div class="step-box highlight-step">
+                      <div class="sb-name">双通道协同计算</div>
+                      <div class="sb-detail">User-based vs Item-based</div>
+                    </div>
+                  </div>
+                  <div class="schematic-connector">→</div>
+
+                  <div class="schematic-step">
+                    <div class="step-num">STAGE 05</div>
+                    <div class="step-box">
+                      <div class="sb-name">Top-N 推荐排序</div>
+                      <div class="sb-detail">预测评分加权 · 排序输出</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="block-section">
+                <h4 class="block-label mono">// 03. 核心攻坚工作与实现细节 (Key Implementations)</h4>
+                <div class="detail-matrix">
+                  <div class="matrix-item">
+                    <div class="mi-index mono">01</div>
+                    <div class="mi-body">
+                      <h5>交互行为数据预处理与稀疏矩阵构建</h5>
+                      <p>对用户与物品评分行为日志进行去噪处理与数据标准化，利用数据处理工具构建紧凑的用户-物品交互评分矩阵，优化稀疏数据存储结构。</p>
+                    </div>
+                  </div>
+
+                  <div class="matrix-item">
+                    <div class="mi-index mono">02</div>
+                    <div class="mi-body">
+                      <h5>多维相似度度量算子向量化实现</h5>
+                      <p>基于 NumPy 矩阵广播机制独立实现余弦相似度（Cosine Similarity）与皮尔逊相关系数（Pearson Correlation Coefficient）运算，消除嵌套循环，显著提升计算执行效率。</p>
+                    </div>
+                  </div>
+
+                  <div class="matrix-item">
+                    <div class="mi-index mono">03</div>
+                    <div class="mi-body">
+                      <h5>User-based 与 Item-based 双通道协同策略对比</h5>
+                      <p>分别实现基于用户视角的邻域召回与基于物品视角的共现关联推荐；系统化对比两者在冷启动场景（Cold Start）与数据稀疏性下的鲁棒性表现。</p>
+                    </div>
+                  </div>
+
+                  <div class="matrix-item">
+                    <div class="mi-index mono">04</div>
+                    <div class="mi-body">
+                      <h5>Top-N 候选排序与规范实验评估报告</h5>
+                      <p>基于目标实体相似度加权预测未交互项评分，输出高置信度 Top-N 推荐清单；整理详实量化指标，撰写符合规范学术标准的实验分析报告。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="dossier-analysis-grid mono">
+                <div class="analysis-card">
+                  <div class="ac-tag text-lime">// ENGINEERING GAINS (工程收获)</div>
+                  <p>透彻理解协同过滤算法数理推导本质与工程实现瓶颈，熟练掌握高维数据矩阵运算与推荐召回系统的评估框架。</p>
+                </div>
+                <div class="analysis-card">
+                  <div class="ac-tag text-cyan">// FUTURE ROADMAP (迭代方向)</div>
+                  <p>计划进一步探索矩阵分解（SVD/ALS 隐语义模型）以及结合大模型 Embedding 向量表示的语义级混合推荐策略。</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="dossier-spec-column mono">
+              <div class="spec-panel-box">
+                <div class="spb-header">
+                  <span>// TECHNICAL SPECIFICATIONS</span>
+                </div>
+                
+                <div class="spb-rows">
+                  <div class="spb-row">
+                    <span class="label">LANGUAGE:</span>
+                    <span class="val text-white">Python 3.10+</span>
+                  </div>
+                  <div class="spb-row">
+                    <span class="label">MATH ENGINE:</span>
+                    <span class="val text-lime">NumPy Vectorized Compute</span>
+                  </div>
+                  <div class="spb-row">
+                    <span class="label">ALGORITHMS:</span>
+                    <span class="val text-white">User-CF / Item-CF</span>
+                  </div>
+                  <div class="spb-row">
+                    <span class="label">METRICS:</span>
+                    <span class="val text-white">Cosine / Pearson Correlation</span>
+                  </div>
+                  <div class="spb-row">
+                    <span class="label">TASK:</span>
+                    <span class="val text-lime">Top-N Item Recommendation</span>
+                  </div>
+                  <div class="spb-row">
+                    <span class="label">ARTIFACT:</span>
+                    <span class="val text-white">Formal Evaluation Report</span>
+                  </div>
+                </div>
+
+                <div class="spb-tags">
+                  <span class="tag-label">// STACK TAGS:</span>
+                  <div class="tags-container">
+                    <span class="stack-badge active">Python</span>
+                    <span class="stack-badge active">NumPy</span>
+                    <span class="stack-badge active">Collaborative Filtering</span>
+                    <span class="stack-badge">Data Processing</span>
+                    <span class="stack-badge">Pearson Correlation</span>
+                    <span class="stack-badge">Cosine Similarity</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       4. 核心系统拓扑交互检查台 (ARCHITECTURE INSPECTOR)
+       ========================================================= -->
+  <section id="architecture" class="section arch-inspector-section">
+    <div class="container">
+      
+      <div class="section-heading-bar mono">
+        <div class="sh-left">
+          <span class="sh-index">[ 02 ]</span>
+          <span class="sh-label">ARCHITECTURE TOPOLOGY & DATA SCHEMAS</span>
+          <span class="sh-sub">// 系统拓扑与数据契约</span>
+        </div>
+      </div>
+
+      <div class="inspector-wrapper mono">
+        <div class="inspector-nav">
+          <button class="insp-tab active" data-target="tab-rag">
+            <span class="tab-code">[ SCHEMA_01 ]</span>
+            <span>RAG 问答链路契约</span>
+          </button>
+          <button class="insp-tab" data-target="tab-fastapi">
+            <span class="tab-code">[ SCHEMA_02 ]</span>
+            <span>FastAPI RESTful 规范</span>
+          </button>
+          <button class="insp-tab" data-target="tab-rec">
+            <span class="tab-code">[ SCHEMA_03 ]</span>
+            <span>协同过滤数学度量</span>
+          </button>
+        </div>
+
+        <div class="inspector-console">
+          <!-- PANEL 1: RAG SCHEMA -->
+          <div class="console-panel active" id="tab-rag">
+            <div class="panel-meta-bar">
+              <span class="pm-status text-lime">● CONTRACT SPECIFICATION: RAG QUERY & GROUNDING DTO</span>
+              <span class="pm-runtime">RUNTIME: Python 3.10 / Qwen-Plus</span>
+            </div>
+            <pre class="code-block"><code><span class="c-comment"># 系统输入输出数据契约定义 (Data Transfer Object)</span>
+<span class="c-keyword">from</span> pydantic <span class="c-keyword">import</span> BaseModel, Field
+<span class="c-keyword">from</span> typing <span class="c-keyword">import</span> List, Optional
+
+<span class="c-keyword">class</span> <span class="c-class">DocumentChunk</span>(BaseModel):
+    chunk_id: <span class="c-type">str</span> = Field(..., description=<span class="c-string">"分块唯一哈希标识"</span>)
+    source_document: <span class="c-type">str</span> = Field(..., description=<span class="c-string">"源文件名 (PDF/TXT)"</span>)
+    page_index: Optional[<span class="c-type">int</span>] = Field(<span class="c-literal">None</span>, description=<span class="c-string">"原文档对应页码"</span>)
+    text_content: <span class="c-type">str</span> = Field(..., description=<span class="c-string">"分块文本正文"</span>)
+    similarity_score: <span class="c-type">float</span> = Field(..., description=<span class="c-string">"与提问的高维余弦相似度得分 [0.0 - 1.0]"</span>)
+
+<span class="c-keyword">class</span> <span class="c-class">RAGQueryResponse</span>(BaseModel):
+    query: <span class="c-type">str</span> = Field(..., description=<span class="c-string">"用户原始提问"</span>)
+    grounded_answer: <span class="c-type">str</span> = Field(..., description=<span class="c-string">"由通义千问模型基于上下文生成的精准推论"</span>)
+    has_grounding: <span class="c-type">bool</span> = Field(..., description=<span class="c-string">"是否存在置信度超标的有效参考资料"</span>)
+    citations: List[DocumentChunk] = Field(default_factory=list, description=<span class="c-string">"完整证据片段及溯源出处"</span>)
+    latency_ms: <span class="c-type">int</span> = Field(..., description=<span class="c-string">"端到端执行耗时 (解析+检索+模型推理)"</span>)</code></pre>
+          </div>
+
+          <!-- PANEL 2: FASTAPI RESTFUL -->
+          <div class="console-panel" id="tab-fastapi">
+            <div class="panel-meta-bar">
+              <span class="pm-status text-lime">● RESTFUL ENDPOINT SPECIFICATION: OPENAPI / FASTAPI</span>
+              <span class="pm-runtime">ROUTERS: /api/v1/auth & /api/v1/items</span>
+            </div>
+            <pre class="code-block"><code><span class="c-comment"># FastAPI RESTful 核心接口契约及分层异常定义</span>
+<span class="c-keyword">from</span> fastapi <span class="c-keyword">import</span> APIRouter, Depends, HTTPException, status
+<span class="c-keyword">from</span> sqlalchemy.orm <span class="c-keyword">import</span> Session
+
+router = APIRouter(prefix=<span class="c-string">"/api/v1/knowledge"</span>, tags=[<span class="c-string">"KnowledgeItems"</span>])
+
+<span class="c-decorator">@router.post</span>(<span class="c-string">"/items"</span>, response_model=ItemResponseSchema, status_code=status.HTTP_201_CREATED)
+<span class="c-keyword">async def</span> <span class="c-func">create_knowledge_item</span>(
+    item_in: ItemCreateSchema,
+    db: Session = Depends(get_db_session),
+    current_user: UserEntity = Depends(get_current_active_user)
+):
+    <span class="c-string">"""
+    创建结构化知识条目:
+    - 校验入参格式与分类合法性 (Pydantic Schema)
+    - 验证用户会话凭证状态 (JWT Bearer Token)
+    - 持久化写入关系型存储层并解耦提交 (SQLAlchemy ORM)
+    """</span>
+    <span class="c-keyword">return</span> KnowledgeService(db).create_item(item_in, owner_id=current_user.id)</code></pre>
+          </div>
+
+          <!-- PANEL 3: RECOMMENDER -->
+          <div class="console-panel" id="tab-rec">
+            <div class="panel-meta-bar">
+              <span class="pm-status text-lime">● MATHEMATICAL VECTOR FORMULATION: COLLABORATIVE FILTERING</span>
+              <span class="pm-runtime">COMPUTE: NumPy Array Broadcast</span>
+            </div>
+            <pre class="code-block"><code><span class="c-comment"># 向量化余弦相似度矩阵计算实现 (Vectorized Cosine Similarity)</span>
+<span class="c-keyword">import</span> numpy <span class="c-keyword">as</span> np
+
+<span class="c-keyword">def</span> <span class="c-func">compute_cosine_similarity_matrix</span>(rating_matrix: np.ndarray) -> np.ndarray:
+    <span class="c-string">"""
+    输入稀疏评分矩阵 (Users x Items)，通过矩阵内积与 L2 范数广播消除原生嵌套循环:
+    Sim(u, v) = (R_u · R_v) / (||R_u||_2 * ||R_v||_2 + eps)
+    """</span>
+    dot_product = np.dot(rating_matrix, rating_matrix.T)
+    norms = np.linalg.norm(rating_matrix, axis=1, keepdims=<span class="c-literal">True</span>)
+    denominator = np.dot(norms, norms.T) + 1e-9
+    similarity_matrix = dot_product / denominator
+    <span class="c-keyword">return</span> similarity_matrix</code></pre>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       5. 技术规格与核心能力雷达 (CAPABILITIES TELEMETRY)
+       ========================================================= -->
+  <section id="capabilities" class="section capabilities-section">
+    <div class="container">
+      
+      <div class="section-heading-bar mono">
+        <div class="sh-left">
+          <span class="sh-index">[ 03 ]</span>
+          <span class="sh-label">ENGINEERING CAPABILITIES MATRIX</span>
+          <span class="sh-sub">// 专业技术规格</span>
+        </div>
+        <div class="sh-right hide-mobile">
+          <span>RIGOROUS DOMAIN SPECIFICATIONS</span>
+        </div>
+      </div>
+
+      <div class="capabilities-grid">
+        
+        <!-- CARD 01: 编程语言 -->
+        <div class="cap-card mono">
+          <div class="cc-header">
+            <span class="cc-code">DOMAIN // 01</span>
+            <span class="cc-tag text-lime">CORE</span>
+          </div>
+          <h3 class="cc-title">编程语言与算法基础</h3>
+          <p class="cc-desc">以 Python 作为主力技术开发语言，兼具扎实的 C 与 Java/Android 编程功底，具备良好的底层算法思维与独立调试纠错能力。</p>
+          <div class="cc-items-list">
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">Python (主力开发语言)</span>
+                <span class="ci-level text-lime">PROFICIENT</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 92%;"></div></div>
+              <span class="ci-note">熟练掌握异步 I/O (Asyncio)、面向对象设计、生成器与函数式编程</span>
+            </div>
+
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">C 语言 (底层与数据结构)</span>
+                <span class="ci-level">SOLID</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 82%;"></div></div>
+              <span class="ci-note">深入理解指针机制、内存生命周期管理及经典树/图数据结构实现</span>
+            </div>
+
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">SQL (关系数据定义与查询)</span>
+                <span class="ci-level text-lime">ADVANCED</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 86%;"></div></div>
+              <span class="ci-note">熟练编写多表连接、子查询、索引优化及结构化 DDL/DML 语句</span>
+            </div>
+
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">Java / Android & Web (HTML/CSS/JS)</span>
+                <span class="ci-level">FOUNDATION</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 75%;"></div></div>
+              <span class="ci-note">掌握面向对象封装继承多态核心范式与基础 Web 前端通信交互</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 02: 后端服务工程 -->
+        <div class="cap-card mono">
+          <div class="cc-header">
+            <span class="cc-code">DOMAIN // 02</span>
+            <span class="cc-tag text-lime">ARCHITECTURE</span>
+          </div>
+          <h3 class="cc-title">后端服务与架构设计</h3>
+          <p class="cc-desc">深刻掌握 HTTP 协议通信机制与 API 规范，具备清晰的后端分层解耦理念与可靠的数据建模经验。</p>
+          <div class="cc-items-list">
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">FastAPI 框架</span>
+                <span class="ci-level text-lime">PROFICIENT</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 90%;"></div></div>
+              <span class="ci-note">熟练运用依赖注入 (Depends)、APIRouter 模块化组织与异步路由处理</span>
+            </div>
+
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">Pydantic 数据验证</span>
+                <span class="ci-level text-lime">ADVANCED</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 88%;"></div></div>
+              <span class="ci-note">严格实现请求报文类型转换、边界条件过滤与响应模型序列化</span>
+            </div>
+
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">MySQL & SQLAlchemy ORM</span>
+                <span class="ci-level text-lime">ADVANCED</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 85%;"></div></div>
+              <span class="ci-note">完成 ER 实体关系建模、外键约束设计、持久层解耦与事务生命周期控制</span>
+            </div>
+
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">JWT 身份凭证鉴权与会话管理</span>
+                <span class="ci-level">SOLID</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 84%;"></div></div>
+              <span class="ci-note">基于标准 Bearer Token 机制实现无状态鉴权与敏感接口防护</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 03: AI 应用与大模型落地 -->
+        <div class="cap-card mono">
+          <div class="cc-header">
+            <span class="cc-code">DOMAIN // 03</span>
+            <span class="cc-tag text-lime">SPECIALIZATION</span>
+          </div>
+          <h3 class="cc-title">AI 应用工程与大模型落地</h3>
+          <p class="cc-desc">聚焦大模型在实际业务场景中的应用工程化，系统掌握 RAG 流程、提示词架构与向量相似度检索技术。</p>
+          <div class="cc-items-list">
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">RAG (检索增强生成架构)</span>
+                <span class="ci-level text-lime">SPECIALIZED</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 92%;"></div></div>
+              <span class="ci-note">构建“解析分块-向量化表征-候选召回-上下文生成-溯源回传”全链路</span>
+            </div>
+
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">大语言模型 API 编排 (Qwen API)</span>
+                <span class="ci-level text-lime">ADVANCED</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 88%;"></div></div>
+              <span class="ci-note">熟练掌握通义千问等主流大模型参数配置、上下文窗口管理与流式生成</span>
+            </div>
+
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">向量相似度检索与度量计算</span>
+                <span class="ci-level">SOLID</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 84%;"></div></div>
+              <span class="ci-note">掌握高维向量余弦相似度计算与 Top-K 近邻匹配算法逻辑</span>
+            </div>
+
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">提示词工程 (Prompt Engineering)</span>
+                <span class="ci-level text-lime">ADVANCED</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 88%;"></div></div>
+              <span class="ci-note">针对长文本检索问答设计防幻觉约束指令、上下文注入模版与兜底机制</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 04: 工程工具与协作 -->
+        <div class="cap-card mono">
+          <div class="cc-header">
+            <span class="cc-code">DOMAIN // 04</span>
+            <span class="cc-tag text-lime">TOOLCHAIN</span>
+          </div>
+          <h3 class="cc-title">开发工具链与工程标准</h3>
+          <p class="cc-desc">熟练应用主流专业研发工具，保持严密的工程规范意识与良好的版本协同习惯。</p>
+          <div class="cc-items-list">
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">PyCharm (专业主力 IDE)</span>
+                <span class="ci-level text-lime">EXPERT</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 94%;"></div></div>
+              <span class="ci-note">熟练进行代码调试、断点追踪、单元测试运行与性能分析</span>
+            </div>
+
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">Git (版本控制与协同)</span>
+                <span class="ci-level">SOLID</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 85%;"></div></div>
+              <span class="ci-note">规范的 Commit 信息提交、分支管理策略与冲突合并解决</span>
+            </div>
+
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">Swagger UI / OpenAPI / Postman</span>
+                <span class="ci-level text-lime">ADVANCED</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 90%;"></div></div>
+              <span class="ci-note">基于标准规范进行接口联调、边界测试与自动化文档交付</span>
+            </div>
+
+            <div class="cc-item">
+              <div class="ci-top">
+                <span class="ci-name">技术文档沉淀 (Markdown)</span>
+                <span class="ci-level text-lime">EXPERT</span>
+              </div>
+              <div class="ci-bar"><div class="ci-fill" style="width: 95%;"></div></div>
+              <span class="ci-note">撰写清晰规范的系统架构设计文档、部署说明与实验评估报告</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       6. 工程方法论与研发信条 (ENGINEERING METHODOLOGY)
+       ========================================================= -->
+  <section id="methodology" class="section methodology-section">
+    <div class="container">
+      
+      <div class="section-heading-bar mono">
+        <div class="sh-left">
+          <span class="sh-index">[ 04 ]</span>
+          <span class="sh-label">ENGINEERING CADENCE & CULTURE</span>
+          <span class="sh-sub">// 研发方法论与实践准则</span>
+        </div>
+      </div>
+
+      <div class="methodology-grid">
+        
+        <div class="method-card mono">
+          <div class="mc-num">RULE // 01</div>
+          <h4 class="mc-title">溯源优先：先理解，再动手</h4>
+          <p class="mc-content">
+            遇到系统异常与运行 Bug 时，坚持优先查阅日志堆栈、源码调用链路与官方技术规范，定位问题的本质机理；
+            坚决摒弃脱离上下文的盲目代码拼凑，追求每一行进入版本库的代码都具备明确的理论支撑。
+          </p>
+        </div>
+
+        <div class="method-card mono">
+          <div class="mc-num">RULE // 02</div>
+          <h4 class="mc-title">契约先行：声明式校验与强类型</h4>
+          <p class="mc-content">
+            在接口开发与数据通信中始终坚持 Contract-First 原则。所有数据流转必须通过严密的 Schemas 进行字段类型校验与边界过滤，
+            将潜在的隐式类型错误消灭在网络边界层，确保核心业务领域逻辑的高鲁棒性。
+          </p>
+        </div>
+
+        <div class="method-card mono">
+          <div class="mc-num">RULE // 03</div>
+          <h4 class="mc-title">闭环交付：可运行与可追溯性</h4>
+          <p class="mc-content">
+            代码的价值在于可稳定运行于真实环境。项目坚持端到端跑通从输入预处理到最终结果交付的完整生命周期，
+            在 AI 应用中坚持引入事实溯源机制与确定性兜底逻辑，让模型推理结果具备工程可观测性与事实可信度。
+          </p>
+        </div>
+
+        <div class="method-card mono">
+          <div class="mc-num">RULE // 04</div>
+          <h4 class="mc-title">敏锐探索：紧跟大模型工业落地前沿</h4>
+          <p class="mc-content">
+            保持高度敏锐的技术视野。持续关注 Function Calling 外部工具调度、多智能体协同机制（Multi-Agent）与长文本检索切分策略演进，
+            致力于将前沿研究成果转化为高可用、高复用度的工业级 AI 服务。
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       7. 候选人详细档案 (ACADEMIC & DOSSIER PROFILE)
+       ========================================================= -->
+  <section id="dossier" class="section dossier-profile-section">
+    <div class="container">
+      
+      <div class="section-heading-bar mono">
+        <div class="sh-left">
+          <span class="sh-index">[ 05 ]</span>
+          <span class="sh-label">CANDIDATE DOSSIER</span>
+          <span class="sh-sub">// 候选人学术与背景档案</span>
+        </div>
+      </div>
+
+      <div class="dossier-layout mono">
+        
+        <!-- 学术规格单 -->
+        <div class="dossier-spec-sheet">
+          <div class="dss-head">// ACADEMIC & CREDENTIALS SPECIFICATION:</div>
+          <div class="dss-body">
+            <div class="dss-row">
+              <span class="dss-k">CANDIDATE // 姓名:</span>
+              <span class="dss-v text-white">陆烨 (LU YE)</span>
+            </div>
+            <div class="dss-row">
+              <span class="dss-k">INSTITUTION // 就读院校:</span>
+              <span class="dss-v text-lime">南京财经大学 (NUFE)</span>
+            </div>
+            <div class="dss-row">
+              <span class="dss-k">MAJOR // 所修专业:</span>
+              <span class="dss-v text-white">计算机科学与技术</span>
+            </div>
+            <div class="dss-row">
+              <span class="dss-k">DEGREE // 学历层次:</span>
+              <span class="dss-v text-white">全日制本科 (预计 2028 年毕业)</span>
+            </div>
+            <div class="dss-row">
+              <span class="dss-k">LANGUAGE // 英语等级:</span>
+              <span class="dss-v text-lime">CET-6 (444 分) · CET-4 (498 分)</span>
+            </div>
+            <div class="dss-row">
+              <span class="dss-k">INTENDED ROLE // 求职意向:</span>
+              <span class="dss-v text-white">AI 应用开发实习生 (2026)</span>
+            </div>
+            <div class="dss-row">
+              <span class="dss-k">CORE CURRICULUM // 核心课程:</span>
+              <span class="dss-v text-muted">数据结构、程序设计、数据库系统、软件工程、Web 开发等</span>
+            </div>
+          </div>
+
+          <div class="dss-english-block">
+            <div class="deb-badge text-lime">✦ 英语技术资料应用能力认证</div>
+            <p class="deb-desc">
+              顺利通过大学英语四级与六级考试，具备扎实严谨的专业英文文献阅读能力，可无障碍流利查阅全英文官方 RFC 规范、开源框架官方技术文档与国际化模型 API 手册。
+            </p>
+          </div>
+        </div>
+
+        <!-- 个人自述与工程宣言 -->
+        <div class="dossier-statement-card">
+          <div class="dsc-head">
+            <span class="text-lime">// PROFESSIONAL BIOGRAPHY & SUMMARY</span>
+            <span class="dsc-sub">STRICT VERIFICATION</span>
+          </div>
+          <div class="dsc-content">
+            <p class="dsc-lead">
+              计算机科学与技术专业在读本科生，系统具备扎实的计算机专业基础理论与代码编写能力，专注于 <strong>AI 应用开发与后端服务工程实践</strong>。
+            </p>
+            <p>
+              在技术实践中，始终坚持通过持续完成<strong>可运行、可验证、具备工程闭环</strong>的项目来打磨专业素养。
+              从 RAG 检索问答 Agent 的端到端落地，到 FastAPI 知识库后端服务的严谨分层，持续在工程实践中强化 API 架构设计、数据清洗转换、模型高效调用与系统问题排查能力。
+            </p>
+            <p>
+              我深信优秀的 AI 工程师不仅需要掌握调用大模型的技巧，更需要具备坚固的软件工程基础底盘，能够把异构数据、RESTful 接口、向量检索、安全鉴权与容灾兜底串联为稳定可用的工程系统。
+              当前正积极寻找 <strong>2026 年 AI 应用开发实习机会</strong>，期待将自己的技术积累与严谨执行力投入到优秀的团队与真实业务产品中，创造扎实的工程价值！
+            </p>
+          </div>
+          <div class="dsc-foot">
+            <div class="dsc-sign">LU YE // 陆烨</div>
+            <div class="dsc-note">COMMITTED TO ENGINEERING RIGOR & RELIABLE AI.</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       8. 联络与人才接洽 (CONTACT & TALENT INQUIRY)
+       ========================================================= -->
+  <section id="contact" class="section contact-terminal-section">
+    <div class="container">
+      
+      <div class="contact-terminal mono">
+        <div class="ct-header">
+          <div class="ct-title-group">
+            <span class="ct-badge"><span class="pulse-indicator"></span>TALENT INQUIRY // 联络通道</span>
+            <span class="ct-status">OPEN TO 2026 INTERNSHIP OPPORTUNITIES</span>
+          </div>
+          <div class="ct-timestamp" id="contact-timestamp">2026-ACTIVE</div>
+        </div>
+
+        <div class="ct-main">
+          <h2 class="ct-heading">
+            LET'S CONSTRUCT<br/>
+            <span class="text-lime">ROBUST AI SYSTEMS.</span>
+          </h2>
+          <p class="ct-lead">
+            当前正积极接洽 <strong>2026 年 AI 应用开发实习生岗位</strong>。如果您正在寻找一位理论基础扎实、代码规范严谨、专注技术本质且具备端到端工程交付能力的实习生，欢迎随时建立联络！
+          </p>
+
+          <!-- 结构化操作卡片 -->
+          <div class="contact-cards-matrix">
+            
+            <!-- 电话通道 -->
+            <div class="cc-action-card" data-copy="18951556785">
+              <div class="cca-top">
+                <span class="cca-label">DIRECT PHONE // 电话</span>
+                <span class="cca-copy-tag">[ 单击复制 ]</span>
+              </div>
+              <div class="cca-val">189 5155 6785</div>
+              <div class="cca-btns">
+                <a href="tel:18951556785" class="cca-btn" title="直接拨号">一键呼叫</a>
+                <button type="button" class="cca-btn btn-copy-trigger" data-text="18951556785">复制号码</button>
+              </div>
+            </div>
+
+            <!-- 邮箱通道 -->
+            <div class="cc-action-card" data-copy="2117177715@qq.com">
+              <div class="cca-top">
+                <span class="cca-label">EMAIL ADDRESS // 电子邮箱</span>
+                <span class="cca-copy-tag">[ 单击复制 ]</span>
+              </div>
+              <div class="cca-val">2117177715@qq.com</div>
+              <div class="cca-btns">
+                <a href="mailto:2117177715@qq.com" class="cca-btn" title="调起邮件客户端">发送邮件</a>
+                <button type="button" class="cca-btn btn-copy-trigger" data-text="2117177715@qq.com">复制邮箱</button>
+              </div>
+            </div>
+
+            <!-- 常驻地 -->
+            <div class="cc-action-card info-card">
+              <div class="cca-top">
+                <span class="cca-label">BASE LOCATION // 常驻地区</span>
+                <span class="cca-copy-tag">[ NANJING ]</span>
+              </div>
+              <div class="cca-val">江苏 · 南京</div>
+              <div class="cca-note">支持南京本地全职/日常实习，亦可配合远程协同</div>
+            </div>
+
+            <!-- 候选状态 -->
+            <div class="cc-action-card info-card highlight-cca">
+              <div class="cca-top">
+                <span class="cca-label">CANDIDATE STATUS // 当前状态</span>
+                <span class="cca-copy-tag">[ READY ]</span>
+              </div>
+              <div class="cca-val text-lime">实习意向求职中</div>
+              <div class="cca-note">可随时安排技术面试与技能考查，支持快速到岗</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       9. 规范化页脚 (FOOTER TELEMETRY)
+       ========================================================= -->
+  <footer class="hud-footer mono">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <span class="footer-id">LU YE // 04</span>
+        <span class="sep">/</span>
+        <span>AI APPLICATION DEVELOPER</span>
+        <span class="sep">/</span>
+        <span>NANJING UNIVERSITY OF FINANCE & ECONOMICS</span>
+        <span class="sep">/</span>
+        <span>© <span id="footer-year">2026</span> ALL RIGHTS RESERVED</span>
+      </div>
+      <div class="footer-right">
+        <span class="text-lime">STANDARDS: PRECISION · RELIABILITY · EXECUTION</span>
+        <span class="sep">/</span>
+        <a href="#hero" class="back-top-link" id="btn-back-top">TOP ▲</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 提示弹窗 (Toast Notification) -->
+  <div id="hud-toast" class="hud-toast mono" aria-live="polite">
+    <span class="toast-marker">⚡</span>
+    <span id="toast-text">SYSTEM // COPIED TO CLIPBOARD</span>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
